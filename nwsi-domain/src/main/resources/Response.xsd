@@ -1,0 +1,24 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://newtonapples.com/domain"
+	targetNamespace="http://newtonapples.com/domain" elementFormDefault="qualified">
+
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="student" type="tns:Student" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+
+	</xs:element>
+
+	<xs:complexType name="Student">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="course" type="xs:string" />
+			<xs:element name="active" type="xs:boolean" />
+			<xs:element name="batchNo" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>
